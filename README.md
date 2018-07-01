@@ -3,30 +3,33 @@
 Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
 
 ## Usage
+
 ### Inputs
+
 #### SMTP Server
-- msg.sendmail.host
-- msg.sendmail.user
-- msg.sendmail.pass
-- msg.sendmail.port
+
+- msg.transport.host
+- msg.transport.port
+- msg.transport.auth.user
+- msg.transport.auth.pass
+
 #### Mail
-- msg.sendmail.from
-- msg.sendmail.to
-- msg.sendmail.subject
-- msg.sendmail.body
+
+- msg.mail.from
+- msg.mail.to
+- msg.mail.subject
+- msg.mail.body
+
 ### Outputs
+
 #### nodemailer response
+
 - msg.payload
 
 ## Example
 
 ```json
 [
-    {
-        "id": "4fd54dd0.9ec404",
-        "type": "tab",
-        "label": "フロー 1"
-    },
     {
         "id": "aef0394a.b36eb8",
         "type": "inject",
@@ -50,18 +53,18 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "id": "ddcd8818.524bb8",
         "type": "template",
         "z": "4fd54dd0.9ec404",
-        "name": "set smtp and mail",
-        "field": "sendmail",
+        "name": "set smtp",
+        "field": "transport",
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"host\": \"xyz.com\",\n    \"user\": \"foobar\",\n    \"pass\": \"password\",\n    \"port\": 587,\n    \"from\": \"foo@xyz.com\",\n    \"to\": \"toyou@gmail.com\",\n    \"subject\": \"Hello\",\n    \"body\": \"Hello,\\nHow are you?\\nGoodbye.\"\n}",
+        "template": "{\n    \"host\": \"xxx.com\",\n    \"port\": 587,\n    \"auth\": {\n        \"user\": \"mailuser\", \n        \"pass\": \"password\"\n    }\n}",
         "output": "json",
-        "x": 314,
+        "x": 268,
         "y": 64,
         "wires": [
             [
-                "9a8b10cf.f5e0d"
+                "56d98d64.621d34"
             ]
         ]
     },
@@ -78,7 +81,7 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "user": "",
         "pass": "",
         "port": 587,
-        "x": 528,
+        "x": 608,
         "y": 64,
         "wires": [
             [
@@ -94,11 +97,28 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 726,
+        "x": 790,
         "y": 64,
         "wires": []
+    },
+    {
+        "id": "56d98d64.621d34",
+        "type": "template",
+        "z": "4fd54dd0.9ec404",
+        "name": "set mail",
+        "field": "mail",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"from\": \"foo@xxx.com\",\n    \"to\": \"bar@gmail.com\",\n    \"subject\": \"Hello\",\n    \"text\": \"Hello,\\nHow are you?\\nGoodbye.\"\n}",
+        "output": "json",
+        "x": 428,
+        "y": 64,
+        "wires": [
+            [
+                "9a8b10cf.f5e0d"
+            ]
+        ]
     }
 ]
 ```
-
-

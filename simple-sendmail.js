@@ -6,20 +6,8 @@ module.exports = function(RED) {
     node.on("input", function(msg) {
       node.status({ fill: "blue", shape: "dot", text: "Sending..." });
       try {
-        var transporter = nodemailer.createTransport({
-          host: msg.sendmail.host,
-          port: msg.sendmail.port,
-          auth: {
-            user: msg.sendmail.user,
-            pass: msg.sendmail.pass
-          }
-        });
-        var mailOptions = {
-          from: msg.sendmail.from,
-          to: msg.sendmail.to,
-          subject: msg.sendmail.subject,
-          text: msg.sendmail.body
-        };
+        var transporter = nodemailer.createTransport(msg.transport);
+        var mailOptions = msg.mail;
         transporter.sendMail(mailOptions, function(error, info){
           if(error){
             msg.payload = error;

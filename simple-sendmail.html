@@ -3,15 +3,7 @@
     category: "social",
     color: "#81D4FA",
     defaults: {
-      name: {value: ""},
-      subject: {value: ""},
-      body: {value: ""},
-      from: {value: ""},
-      to: {value: ""},
-      host: {value: ""},
-      user: {value: ""},
-      pass: {value: ""},
-      port: {value: 587}
+      name: {value: ""}
     },
     inputs: 1,
     outputs: 1,
@@ -35,19 +27,19 @@
     <dt>SMTP Server</dt>
     <dd>
       <ul>
-        <li>msg.sendmail.host</li>
-        <li>msg.sendmail.user</li>
-        <li>msg.sendmail.pass</li>
-        <li>msg.sendmail.port</li>
+        <li>msg.transport.host</li>
+        <li>msg.transport.port</li>
+        <li>msg.transport.auth.user</li>
+        <li>msg.transport.auth.pass</li>
       </ul>
     <dd>
     <dt>Mail</dt>
     <dd>
       <ul>
-        <li>msg.sendmail.from</li>
-        <li>msg.sendmail.to</li>
-        <li>msg.sendmail.subject</li>
-        <li>msg.sendmail.body</li>
+        <li>msg.mail.from</li>
+        <li>msg.mail.to</li>
+        <li>msg.mail.subject</li>
+        <li>msg.mail.text</li>
       </ul>
     </dd>
   </dl>
