@@ -1,0 +1,30 @@
+{
+  "name": "node-red-contrib-simple-sendmail",
+  "version": "0.0.1",
+  "description": "",
+  "main": "simple-sendmail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/high-u/node-red-contrib-simple-sendmail.git"
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "author": "high-u",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/high-u/node-red-contrib-simple-sendmail/issues"
+  },
+  "homepage": "https://github.com/high-u/node-red-contrib-simple-sendmail#readme",
+  "node-red": {
+    "nodes": {
+      "simple-sendmail": "simple-sendmail.js"
+    }
+  },
+  "dependencies": {
+    "nodemailer": "^4.6.7"
+  }
+}
