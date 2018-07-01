@@ -6,8 +6,8 @@ module.exports = function(RED) {
     node.on("input", function(msg) {
       node.status({ fill: "blue", shape: "dot", text: "Sending..." });
       try {
-        var transporter = nodemailer.createTransport(msg.transport);
-        var mailOptions = msg.mail;
+        var transporter = nodemailer.createTransport(msg.mail.transport);
+        var mailOptions = msg.mail.options;
         transporter.sendMail(mailOptions, function(error, info){
           if(error){
             msg.payload = error;

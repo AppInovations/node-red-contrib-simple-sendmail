@@ -8,17 +8,17 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
 
 #### SMTP Server
 
-- msg.transport.host
-- msg.transport.port
-- msg.transport.auth.user
-- msg.transport.auth.pass
+- msg.mail.transport.host
+- msg.mail.transport.port
+- msg.mail.transport.auth.user
+- msg.mail.transport.auth.pass
 
-#### Mail
+#### Mail Options
 
-- msg.mail.from
-- msg.mail.to
-- msg.mail.subject
-- msg.mail.body
+- msg.mail.options.from
+- msg.mail.options.to
+- msg.mail.options.subject
+- msg.mail.options.text
 
 ### Outputs
 
@@ -45,25 +45,6 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "y": 64,
         "wires": [
             [
-                "ddcd8818.524bb8"
-            ]
-        ]
-    },
-    {
-        "id": "ddcd8818.524bb8",
-        "type": "template",
-        "z": "4fd54dd0.9ec404",
-        "name": "set smtp",
-        "field": "transport",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{\n    \"host\": \"xxx.com\",\n    \"port\": 587,\n    \"auth\": {\n        \"user\": \"mailuser\", \n        \"pass\": \"password\"\n    }\n}",
-        "output": "json",
-        "x": 268,
-        "y": 64,
-        "wires": [
-            [
                 "56d98d64.621d34"
             ]
         ]
@@ -81,7 +62,7 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "user": "",
         "pass": "",
         "port": 587,
-        "x": 608,
+        "x": 464,
         "y": 64,
         "wires": [
             [
@@ -97,7 +78,7 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 790,
+        "x": 646,
         "y": 64,
         "wires": []
     },
@@ -110,9 +91,9 @@ Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"from\": \"foo@xxx.com\",\n    \"to\": \"bar@gmail.com\",\n    \"subject\": \"Hello\",\n    \"text\": \"Hello,\\nHow are you?\\nGoodbye.\"\n}",
+        "template": "{\n    \"transport\": {\n        \"host\": \"xxxxx.com\",\n        \"port\": 587,\n        \"auth\": {\n            \"user\": \"username\", \n            \"pass\": \"password\"\n        }\n    },\n    \"options\": {\n        \"from\": \"foo@xxxxx.com\",\n        \"to\": \"bar@gmail.com\",\n        \"subject\": \"Hello\",\n        \"text\": \"Hello,\\nHow are you?\\nGoodbye.\"\n    }\n}",
         "output": "json",
-        "x": 428,
+        "x": 284,
         "y": 64,
         "wires": [
             [
