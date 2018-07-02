@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-simple-sendmail",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Send mail using nodemailer.Input all options.Input values ​​conform to nodemailer.",
   "main": "simple-sendmail.js",
   "scripts": {
