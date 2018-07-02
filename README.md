@@ -30,6 +30,8 @@ Input values ​​conform to nodemailer.
 
 ## Example
 
+[Example Flows](./images/example-flows.png)
+
 ```json
 [
     {
