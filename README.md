@@ -30,7 +30,7 @@ Input values ​​conform to nodemailer.
 
 ## Example
 
-[Example Flows](https://raw.githubusercontent.com/high-u/node-red-contrib-simple-sendmail/master/images/example-flows.png)
+![Example Flows](https://raw.githubusercontent.com/high-u/node-red-contrib-simple-sendmail/master/images/example-flows.png)
 
 ```json
 [
