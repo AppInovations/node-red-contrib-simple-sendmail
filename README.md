@@ -6,6 +6,7 @@
 - Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
 - Input all options.
 - Input values ​​conform to nodemailer.
+- Better to combine with [node-red-contrib-credentials](https://flows.nodered.org/node/node-red-contrib-credentials) or [node-red-contrib-process-env](https://flows.nodered.org/node/node-red-contrib-process-env).
 
 ## Released
 
