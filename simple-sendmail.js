@@ -10,7 +10,6 @@ module.exports = function(RED) {
         var mailOptions = msg.mail.options;
         transporter.sendMail(mailOptions, function(error, info){
           if(error){
-            msg.payload = error;
             node.status({ fill: "red", shape: "dot", text: "error" });
             node.error(error);
           }else{

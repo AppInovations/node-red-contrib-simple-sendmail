@@ -2,10 +2,22 @@
 
 ## Feature
 
-- Package for [Node-RED](https://flows.nodered.org).
+- Package for [Node-RED](https://nodered.org).
 - Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
 - Input all options.
 - Input values ​​conform to nodemailer.
+
+## Released
+
+|Date|Version|Description|
+|:--:|:--:|:--|
+|2018-07-01|0.0.1|Released|
+
+## Install
+
+```bash
+npm install --save node-red-contrib-simple-sendmail
+```
 
 ## Usage
 

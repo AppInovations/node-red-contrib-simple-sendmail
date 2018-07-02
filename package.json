@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-simple-sendmail",
-  "version": "0.1.5",
-  "description": "Send mail using nodemailer.Input all options.Input values ​​conform to nodemailer.",
+  "version": "0.1.6",
+  "description": "Package for Node-RED. Send mail using nodemailer. Input all options.Input values ​​conform to nodemailer.",
   "main": "simple-sendmail.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
