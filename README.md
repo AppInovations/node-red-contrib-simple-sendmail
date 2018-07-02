@@ -1,6 +1,8 @@
 # node-red-contrib-simple-sendmail
 
 Send mail using [nodemailer](https://www.npmjs.com/package/nodemailer).
+Input all options.
+Input values ​​conform to nodemailer.
 
 ## Usage
 
