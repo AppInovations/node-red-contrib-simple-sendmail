@@ -11,7 +11,7 @@ module.exports = function(RED) {
         transporter.sendMail(mailOptions, function(error, info){
           if(error){
             node.status({ fill: "red", shape: "dot", text: "error" });
-            node.error(error);
+            node.error(error.message,error);
           }else{
             msg.payload = info;
             node.status({});
@@ -21,7 +21,7 @@ module.exports = function(RED) {
       }
       catch (e) {
         node.status({ fill: "red", shape: "dot", text: "error" });
-        node.error(e);
+        node.error("Cant Send Mail",e);
       }
     });
   }
